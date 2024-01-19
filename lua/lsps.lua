@@ -1,10 +1,5 @@
 require("mason_conf")
 
--- -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
--- require("neodev").setup({
---   -- add any options here, or leave empty to use the default settings
--- })
-
 local function default_lsp_handler(server_name)
     local opts = vim.tbl_deep_extend("force", require("lsp").common_opts(), {})
     vim.lsp.config(server_name, opts)
@@ -29,15 +24,9 @@ require("mason-lspconfig").setup_handlers {
     ["basedpyright"] = function()
         require("lsp.basedpyright-ls")
     end,
-    -- ["pest_ls"] = function()
-    -- 	require("pest-vim").setup(require("lsp").common_opts())
-    -- end,
 }
 
 local executable_handlers = {
-    ["efm-langserver"] = function()
-        require("lsp.efmls")
-    end,
     ["lua-language-server"] = function()
         require("lsp.lua-ls")
     end,
@@ -71,10 +60,6 @@ local executable_handlers = {
     ["harper-ls"] = function()
         default_lsp_handler("harper_ls")
     end,
-    ["jdtls"] = function()
-        default_lsp_handler("jdtls")
-    end,
-
     -- these come from vscode-langservers-extracted
     ["vscode-eslint-language-server"] = function()
         default_lsp_handler("eslint")

@@ -2,7 +2,7 @@ return {
     {
         "stevearc/oil.nvim",
         opts = {},
-        dependencies = { "nvim-tree/nvim-web-devicons", "refractalize/oil-git-status.nvim" },
+        dependencies = { "echasnovski/mini.icons", "refractalize/oil-git-status.nvim" },
         config = function()
             require("oil").setup {
                 delete_to_trash = true,
