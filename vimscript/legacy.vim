@@ -50,3 +50,5 @@ autocmd FileType c,cpp,java,scala noremap <leader>w :!astyle -p -U -O -f -y -Y -
 autocmd FileType c,cpp,java,scala noremap <leader>s :!astyle -p -U -O -f -y -Y -xj -xV -xp -xb -xp -Z -xg -xe -W1 -S -K -N -k1 -C --style=allman % && rm %.orig<CR>
 autocmd FileType c,cpp,java,scala vnoremap <leader>w :!astyle -p -U -O -f -y -Y -xj -xV -xp -xb -xp -Z -xg -xe -W1 -S -K -N -k1 -C --style=google <CR>
 autocmd FileType c,cpp,java,scala vnoremap <leader>s :!astyle -p -U -O -f -y -Y -xj -xV -xp -xb -xp -Z -xg -xe -W1 -S -K -N -k1 -C --style=allman <CR>
+
+set viminfo+=n~/.local/share/nvim/viminfo
