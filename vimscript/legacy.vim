@@ -1,15 +1,7 @@
 " legacy stuff that couldn't move to lua
 
-" Jump to last position
-autocmd BufReadPost *
-  \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'gitcommit'
-  \ |   exe "normal! g`\""
-  \ | endif
-
 " tabs and spaces for specific files
-autocmd Filetype javascript,typescript,typescriptreact,javascriptreact,svelte setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-" autocmd Filetype cpp,c setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-" autocmd Filetype go setlocal tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab
+autocmd Filetype javascript,typescript,typescriptreact,javascriptreact,svelte,xml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype terraform setlocal tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab
 
 " spell check for specific files
@@ -35,4 +27,10 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
-set mouse=
+set mouse=r
+
+" :W sudo saves the file
+" (useful for handling the permission-denied error)
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+set viminfo+=n~/.local/share/nvim/viminfo

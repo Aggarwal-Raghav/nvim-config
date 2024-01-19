@@ -1,8 +1,9 @@
 ---@type LazySpec
 return {
-    -- still better than built-in commenting in 0.10:
-    -- https://github.com/numToStr/Comment.nvim/issues/453
-    "numToStr/Comment.nvim",
-    opts = {},
-    lazy = false,
+    {
+        "folke/ts-comments.nvim",
+        opts = {},
+        event = "VeryLazy",
+        enabled = vim.fn.has("nvim-0.10.0") == 1,
+    }
 }

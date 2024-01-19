@@ -8,4 +8,10 @@ return {
         end,
         ft = { "markdown" },
     },
+    {
+        "MeanderingProgrammer/render-markdown.nvim",
+        opts = {},
+        dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" },
+        ft = { "markdown", "markdown_inline" },
+    },
 }
