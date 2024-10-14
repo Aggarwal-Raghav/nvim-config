@@ -2,6 +2,7 @@
 
 # lua lsp stuff
 /lua/.luarc.json
+lazy-lock.json
 
 # apple
 .DS_STORE
