@@ -4,7 +4,7 @@ vim.g.rustaceanvim = {
             workspace = {
                 -- https://github.com/hrsh7th/cmp-nvim-lsp/issues/44#issuecomment-2096368152
                 -- but also needed files.excludeDirs below
-                didChangeWatchedFiles = { dynamicRegistration = true },
+                didChangeWatchedFiles = { dynamicRegistration = false },
             },
         },
         on_attach = function(client, bufnr)
@@ -46,6 +46,7 @@ vim.g.rustaceanvim = {
                 files = {
                     excludeDirs = {
                         ".direnv",
+                        ".git",
                         "target",
                     },
                 },
