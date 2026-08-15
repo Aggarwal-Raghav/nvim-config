@@ -61,6 +61,7 @@ require("nvim-treesitter").install {
     "toml",
     "tsx",
     "typescript",
+    "typst",
     "xml",
     "yaml",
     "zig",

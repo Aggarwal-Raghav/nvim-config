@@ -53,6 +53,12 @@ local executable_handlers = {
     ["rust-analyzer"] = function()
         require("lsp.rust-ls")
     end,
+    ["gopls"] = function()
+        require("lsp.go-ls")
+    end,
+    ["tinymist"] = function()
+        default_lsp_handler("tinymist")
+    end,
     ["zls"] = function()
         default_lsp_handler("zls")
     end,
