@@ -58,7 +58,6 @@ require("nvim-treesitter").install {
     "swift",
     "terraform",
     "thrift",
-    "tmux",
     "toml",
     "tsx",
     "typescript",
