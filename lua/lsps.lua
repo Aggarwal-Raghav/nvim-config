@@ -80,6 +80,9 @@ local executable_handlers = {
     ["jdtls"] = function()
         default_lsp_handler("jdtls")
     end,
+    ["astro-ls"] = function()
+        default_lsp_handler("astro")
+    end,
 
     -- these come from vscode-langservers-extracted
     ["vscode-eslint-language-server"] = function()

@@ -20,12 +20,15 @@ ret.languages = vim.tbl_extend("force", languages, {
     -- Custom languages, or override existing ones
     typescript = {
         require("efmls-configs.formatters.prettier"),
+        require("efmls-configs.formatters.biome"),
     },
     typescriptreact = {
         require("efmls-configs.formatters.prettier"),
+        require("efmls-configs.formatters.biome"),
     },
     javascript = {
         require("efmls-configs.formatters.prettier"),
+        require("efmls-configs.formatters.biome"),
     },
     python = {
         require("efmls-configs.formatters.black"),
