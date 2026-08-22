@@ -24,6 +24,9 @@ require("mason-lspconfig").setup_handlers {
     ["basedpyright"] = function()
         require("lsp.basedpyright-ls")
     end,
+    ["jdtls"] = function()
+        require("lsp.jdtls-ls")
+    end,
 }
 
 local executable_handlers = {
@@ -82,6 +85,9 @@ local executable_handlers = {
     end,
     ["vscode-css-language-server"] = function()
         default_lsp_handler("cssls")
+    end,
+    ["jdtls"] = function()
+        require("lsp.jdtls-ls")
     end,
 }
 
